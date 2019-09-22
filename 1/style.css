@@ -1,0 +1,77 @@
+body, html {
+  background: #40b083;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; }
+
+.ham1 {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #333333;
+  position: relative;
+  top: 0px;
+  width: 100px;
+  height: 10px;
+  background: white; }
+
+.off1 {
+  animation: animation1 0.7s both; }
+
+.on1 {
+  animation: animation1 0.7s both reverse; }
+
+.ham2 {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #333333;
+  position: relative;
+  top: 15px;
+  width: 100px;
+  height: 10px;
+  background: white; }
+
+.off2 {
+  animation: animation2 0.7s both; }
+
+.on2 {
+  animation: animation2 0.7s both reverse; }
+
+.ham3 {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #333333;
+  position: relative;
+  top: 30px;
+  width: 100px;
+  height: 10px;
+  background: white; }
+
+.off3 {
+  animation: animation3 0.7s both; }
+
+.on3 {
+  animation: animation3 0.7s both reverse; }
+
+@keyframes animation1 {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateY(25px); }
+  100% {
+    transform: translateY(25px) rotate(45deg); } }
+@keyframes animation2 {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(0); } }
+@keyframes animation3 {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateY(-25px); }
+  100% {
+    transform: translateY(-25px) rotate(135deg); } }
+
+/*# sourceMappingURL=style.css.map */
