@@ -1,0 +1,43 @@
+html, body
+    margin: 0
+    padding: 0
+    font-family: arial
+    background: hsl(177, 100%, 22%)
+
+.container
+    display: flex
+    flex-direction: column
+    border-radius: 5px
+    width: 300px
+    height: 270px
+
+.top
+    background: hsl(46, 100%, 50%)
+    height: 50px
+    padding: 20px 20px 0 20px
+
+    &__left
+        text-align: left
+        float: left
+
+    &__right
+        float: right
+        text-align: right
+
+    &__title, &__money
+        font-size: 12px
+        margin: 0
+
+    &__title
+        padding: 0 0 5px
+
+    &__money
+        padding: 5px 0 0
+
+    &__text, &__date
+        margin: 0 0 0 0
+        font-size: 9px
+
+.bottom
+    max-height: 200px
+    background: hsl(46, 100%, 100%)

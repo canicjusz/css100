@@ -1,3 +1,39 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  background: #00706b; }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 300px;
+  height: 270px; }
+
+.top {
+  background: #ffc400;
+  height: 50px;
+  padding: 20px 20px 0 20px; }
+  .top__left {
+    text-align: left;
+    float: left; }
+  .top__right {
+    float: right;
+    text-align: right; }
+  .top__title, .top__money {
+    font-size: 12px;
+    margin: 0; }
+  .top__title {
+    padding: 0 0 5px; }
+  .top__money {
+    padding: 5px 0 0; }
+  .top__text, .top__date {
+    margin: 0 0 0 0;
+    font-size: 9px; }
+
+.bottom {
+  max-height: 200px;
+  background: white; }
 
 /*# sourceMappingURL=style.css.map */
