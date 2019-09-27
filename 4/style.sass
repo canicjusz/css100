@@ -1,15 +1,19 @@
+$red: hsl(0, 79%, 65%)
+$blue: hsl(215, 79%, 65%)
+
 html, body
+
     margin: 0
     padding: 0
     font-family: arial
     background: hsl(177, 100%, 22%)
 
 .container
-    display: flex
-    flex-direction: column
     border-radius: 5px
-    width: 300px
-    height: 270px
+    width: 250px
+    height: 260px
+    background: black
+    overflow: hidden
 
 .top
     background: hsl(46, 100%, 50%)
@@ -39,5 +43,42 @@ html, body
         font-size: 9px
 
 .bottom
-    max-height: 200px
+    height: calc(100% - 70px)
     background: hsl(46, 100%, 100%)
+    display: flex
+    flex-direction: column
+    
+.legend
+    margin: 10px 10px 0 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    height: 20px
+
+    &__red
+        text-align: end
+        display: flex
+
+    &__blue
+        text-align: end
+        display: flex
+
+    &__red-line
+        width: 10px
+        height: 100%
+
+    &__blue-line
+        width: 10px
+        height: 100%
+
+    &__text
+        margin: 5px
+        font-size: 10px
+
+    &__red-svg
+        stroke: $red
+        stroke-width: 3
+
+    &__blue-svg
+        stroke: $blue
+        stroke-width: 3
