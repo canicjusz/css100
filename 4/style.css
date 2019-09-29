@@ -1,4 +1,9 @@
 html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   font-family: arial;
@@ -7,9 +12,10 @@ html, body {
 .container {
   border-radius: 5px;
   width: 250px;
-  height: 260px;
+  height: 210px;
   background: black;
-  overflow: hidden; }
+  overflow: hidden;
+  transform: scale(2); }
 
 .top {
   background: #ffc400;
@@ -39,7 +45,7 @@ html, body {
   flex-direction: column; }
 
 .legend {
-  margin: 10px 10px 0 0;
+  margin: 10px 10px 10px 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -65,5 +71,187 @@ html, body {
   .legend__blue-svg {
     stroke: #5f9aec;
     stroke-width: 3; }
+
+.lines {
+  position: absolute;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px; }
+
+.points {
+  height: 70px;
+  width: 250px; }
+  .points__red {
+    height: 40px; }
+  .points svg {
+    z-index: 1; }
+  .points__red-polyline {
+    stroke: #ec5f5f;
+    stroke-width: 3;
+    fill: none;
+    transform: scale(0.9) translateX(10px); }
+  .points__blue-polyline {
+    display: inline-block;
+    stroke: #5f9aec;
+    stroke-width: 3;
+    fill: none;
+    top: 0;
+    transform: scale(0.9) translateX(10px) translateY(-45px); }
+
+.day {
+  position: relative;
+  z-index: 99;
+  font-size: 10px;
+  float: left;
+  text-align: center;
+  width: 14.2857142857%;
+  margin-top: 5px; }
+
+.red-point-1 {
+  top: 147px;
+  left: 15px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #ec5f5f;
+  border-radius: 50%; }
+
+.red-point-2 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #ec5f5f;
+  border-radius: 50%; }
+
+.red-point-3 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #ec5f5f;
+  border-radius: 50%; }
+
+.red-point-4 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #ec5f5f;
+  border-radius: 50%; }
+
+.red-point-5 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #ec5f5f;
+  border-radius: 50%; }
+
+.red-point-6 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #ec5f5f;
+  border-radius: 50%; }
+
+.red-point-7 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #ec5f5f;
+  border-radius: 50%; }
+
+.blue-point-1 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #5f9aec;
+  border-radius: 50%; }
+
+.blue-point-2 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #5f9aec;
+  border-radius: 50%; }
+
+.blue-point-3 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #5f9aec;
+  border-radius: 50%; }
+
+.blue-point-4 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #5f9aec;
+  border-radius: 50%; }
+
+.blue-point-5 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #5f9aec;
+  border-radius: 50%; }
+
+.blue-point-6 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #5f9aec;
+  border-radius: 50%; }
+
+.blue-point-7 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background: #5f9aec;
+  border-radius: 50%; }
+
+.line-1 {
+  height: 1px;
+  width: 90%;
+  background: gray;
+  opacity: 0.1; }
+
+.line-2 {
+  height: 1px;
+  width: 90%;
+  background: gray;
+  opacity: 0.1; }
+
+.line-3 {
+  height: 1px;
+  width: 90%;
+  background: gray;
+  opacity: 0.1; }
 
 /*# sourceMappingURL=style.css.map */
