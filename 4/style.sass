@@ -2,10 +2,44 @@ $red: hsl(0, 79%, 65%)
 $blue: hsl(215, 79%, 65%)
 $bluevalues: ('26','41','22','36','25','13','20')
 $redvalues: ('458','812','746','877','517','434','458')
-$bluetops: (0,0,0,0,0,0,0)
-$redtops: (147,0,0,0,0,0,0)
-$bluelefts: (0,0,0,0,0,0,0)
-$redlefts: (15,0,0,0,0,0,0)
+$bluetops: (161,152,164,156,161,172,164)
+$redtops: (147,118,127,117,140,149,125)
+$lefts: (15,50,87,122,158,195,229)
+
+@mixin point
+    position: absolute
+    height: 7px
+    width: 7px
+    border-radius: 50%
+
+@mixin pointafter
+    z-index: 2
+    opacity: 0.7
+    visibility: hidden
+    transition: transform 0.3s, opacity 0.3s
+    font-size: 11px
+    color: hsl(0, 0, 100)
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 20px
+    width: 30px
+    transform: translate(-12px, -20px)
+    border-radius: 2px
+
+@mixin pointbefore
+    z-index: 1
+    opacity: 0
+    visibility: hidden
+    transition: transform 0.3s, opacity 0.3s
+    display: flex
+    position: absolute
+    content: ''
+    height: 10px
+    width: 10px
+    transform: translate(-2px, -5px) scaleX(1.5)
+    clip-path: polygon(50% 100%, 0 0, 100% 0)
 
 html, body
     width: 100%
@@ -140,24 +174,57 @@ html, body
 //loop through red points
 @for $i from 1 through 7
     .red-point-#{$i}
+        @include point
         top: nth($redtops, $i)+px
-        left: nth($redlefts, $i)+px
-        position: absolute
-        height: 7px
-        width: 7px
+        left: nth($lefts, $i)+px
         background: $red
-        border-radius: 50%
+
+    .red-point-#{$i}:after
+        @include pointafter
+        content: nth($redtops, $i)+''
+        background: $red
+
+    .red-point-#{$i}:before
+        @include pointbefore
+        background: $red
+    
+    .red-point-#{$i}:hover:before
+        opacity: 1
+        transform: translate(-2px, -10px) scaleX(1.5)
+        visibility: visible
+
+    .red-point-#{$i}:hover:after
+        opacity: 1
+        transform: translate(-12px, -25px)
+        visibility: visible
+    
 
 //loop through blue points
 @for $i from 1 through 7
     .blue-point-#{$i}
+        @include point
         top: nth($bluetops, $i)+px
-        left: nth($bluelefts, $i)+px
-        position: absolute
-        height: 7px
-        width: 7px
+        left: nth($lefts, $i)+px
         background: $blue
-        border-radius: 50%
+
+    .blue-point-#{$i}:after
+        @include pointafter
+        content: nth($redtops, $i)+''
+        background: $blue
+
+    .blue-point-#{$i}:before
+        @include pointbefore
+        background: $blue
+    
+    .blue-point-#{$i}:hover:before
+        opacity: 1
+        transform: translate(-2px, -10px) scaleX(1.5)
+        visibility: visible
+
+    .blue-point-#{$i}:hover:after
+        opacity: 1
+        transform: translate(-12px, -25px)
+        visibility: visible
 
 @for $i from 1 through 3
     .line-#{$i}
