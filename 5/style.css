@@ -1,3 +1,14 @@
+.img-container .circle-1, .img-container .circle-2 {
+  background: transparent;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #88452b;
+  -webkit-transition: -webkit-transform 1.5s ease-in-out;
+  transition: -webkit-transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out, -webkit-transform 1.5s ease-in-out;
+}
+
 * {
   color: #88452b;
 }
@@ -21,6 +32,8 @@ html, body {
 }
 
 .main {
+  -webkit-box-shadow: 5px 5px 20px -10px black;
+          box-shadow: 5px 5px 20px -10px black;
   height: 250px;
   width: 300px;
   background: white;
@@ -42,15 +55,6 @@ html, body {
           align-items: center;
 }
 
-.left .img-container {
-  margin-top: 30px;
-}
-
-.left .img {
-  width: 70px;
-  border-radius: 50%;
-}
-
 .left .text {
   margin-top: 10px;
 }
@@ -67,6 +71,7 @@ html, body {
 }
 
 .left .buttons {
+  background: white;
   margin-top: 25px;
   width: 60%;
   display: -webkit-box;
@@ -78,7 +83,14 @@ html, body {
           flex-direction: column;
 }
 
+.left .buttons > *:hover {
+  background: #88452b;
+  color: white;
+}
+
 .left .buttons > * {
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
   font-size: 12px;
   background: white;
   border: #88452b 1px solid;
@@ -87,6 +99,43 @@ html, body {
 
 .left .message {
   margin-top: 10px;
+}
+
+.img-container {
+  position: relative;
+  margin-top: 30px;
+}
+
+.img-container .circle-1 {
+  top: -5%;
+  left: -5%;
+  height: 76px;
+  width: 76px;
+  border-left: 1px solid white;
+}
+
+.img-container .circle-2 {
+  top: -9%;
+  left: -9%;
+  height: 82px;
+  width: 82px;
+  border-right: 1px solid white;
+}
+
+.img-container .img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.img-container:hover .circle-1 {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+}
+
+.img-container:hover .circle-2 {
+  -webkit-transform: rotate(-720deg);
+          transform: rotate(-720deg);
 }
 
 .right {
@@ -103,7 +152,13 @@ html, body {
   margin-top: 1px;
 }
 
+.right > *:hover {
+  background: #e7c1b1;
+}
+
 .right > * {
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
   background: #f2ddd4;
   display: -webkit-box;
   display: -ms-flexbox;
