@@ -1,0 +1,84 @@
+html, body
+    height: 100%
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0
+    background: hsl(208, 39%, 25%)
+
+*
+    font-family: arial
+
+.container
+    height: 300px
+    width: 300px
+    background: hsl(0, 0%, 100%)
+
+.side
+    z-index: 1
+
+.main
+    margin: 0
+    height: 100%
+    z-index: 2
+
+.top
+    background: hsl(208, 39%, 65%)
+    padding: 15px 10px
+    display: flex
+    justify-content: space-between
+    flex: auto
+
+    &__hamburger
+        width: 30px
+        height: 30px
+
+    &__ham
+        margin-top: 7px
+        background: hsla(0, 0%, 100%, 0.74)
+        display: block
+        width: 20px
+        height: 3px
+
+    &__ham:after
+        position: relative
+        top: 5px
+        background: hsla(0, 0%, 100%, 0.74)
+        display: block
+        width: 30px
+        height: 3px
+        content: ''
+
+    &__ham:before
+        position: relative
+        border-radius: 10px
+        top: -2px
+        left: 23px
+        background: hsla(0, 0%, 100%, 0.74)
+        display: block
+        width: 7px
+        height: 7px
+        content: ''
+
+    &__title
+        font-size: 1.3em
+        font-weight: 100
+        margin: 0
+        margin-top: 3px
+
+    &__search
+        margin-top: 3px
+
+    &__search-box
+        position: absolute
+        visibility: hidden
+
+.post
+
+    &__date
+        margin: 0
+
+    &__content
+        margin: 0
+
