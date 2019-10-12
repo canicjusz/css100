@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400)
+    
+html, body
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0
+    width: 100%
+    height: 100%
+
+*
+    font-family: 'Open Sans'
+    font-weight: 100
+
+.container
+    overflow: hidden
+    box-shadow: 5px 5px 20px -10px hsl(0, 100%, 0%)
+    display: flex
+    flex-direction: column
+    position: relative
+    margin: 0
+    width: 400px
+    height: 400px
+
+.window
+    background: hsl(251, 100%, 15%)
+    position: relative
+    height: calc(100% - 80px)
+
+.weather
+    display: flex
+    background: hsl(1, 0%, 100%)
+    position: relative
+    width: 100%
+    height: 80px
+
+.left
+    width: 60%
+    height: 100%
+    display: grid
+    grid-template-areas: "temperature temperature wind wind" "temperature temperature humidity humidity"
+    
+    &__temperature
+        display: flex
+        margin: 0
+        font-size: 50px
+        align-items: center
+        justify-content: center
+        grid-area: temperature
+
+    &__wind
+        display: flex
+        align-items: flex-end
+        grid-area: wind
+
+    &__humidity
+        grid-area: humidity
+
+.right
+    width: 40%
+    height: 100%
+    display: flex
+    margin-right: 10px
+    align-items: flex-end
+    justify-content: center
+    flex-direction: column
+
+    > *
+        text-align: end
+        width: 80%
+        display: grid
+        grid-gap: 5px
+        grid-template-columns: 1fr 2fr
+
+    &__temperature
+        font-weight: 500
+        text-align: end
+
+.hills
+
+    .far-hill
+        bottom: 0
+        position: absolute
+        background: hsl(251, 100%, 20%)
+        width: 240px
+        border-radius: 50%
+
+    @for $i from 1 through 2
+        .far-hill#{$i}
+            height: 120px+$i*10px
+            right: -0+160px*($i - 1)
+
+    .close-hill
+        bottom: -20px
+        position: absolute
+        background: hsl(251, 100%, 25%)
+        width: 200px
+        border-radius: 50%
+    
+    $close-hill-height: (115,130,90)
+    @for $i from 1 through 3
+        .close-hill#{$i}
+            height: nth($close-hill-height, $i)+px
+            right: -80px+155px*($i - 1)
+
+.moon
+    transition: transform ease-in-out 1s
+    transform: translateY(-200px)
+    overflow: hidden
+    bottom: 0px
+    left: 20px
+    box-shadow: 0px 0px 50px -5px hsl(51, 76%, 85%)
+    border-radius: 50%
+    width: 100px
+    height: 100px
+    background: hsl(51, 76%, 85%)
+    position: absolute
+
+    &__crater
+        border-radius: 50%
+        left: 20px
+        position: absolute
+        width: 10px
+        height: 10px
+        background: hsl(51, 76%, 75%)
+    
+    $top-crater: (10, 10, 30, 40, 40, 55, 23, 60, 90, 65, 80)
+    $left-crater: (10, 50, 40, 20, 90, 40, 70, 70, 43, 22, 10)
+    $scale-crater: (2, 0.7, 2, 0.9, 0.9, 0.6, 1, 1, 1.7, 1, 1)
+    @for $i from 1 through 11
+        &__crater#{$i}
+            transform: scale(nth($scale-crater,$i))
+            top: nth($top-crater,$i)+px
+            left: nth($left-crater,$i)+px
+
+.small-drop
+    transform: rotate(75deg)
+    border-radius: 0 50% 50% 50%
+    z-index: 3
+    bottom: 0
+    transform-origin: 50% 100%
+    position: absolute
+    height: 6px
+    width: 6px
+    background: hsla(220, 100%, 80%, 0.4)
+
+.medium-drop
+    @extend .small-drop
+    z-index: 4
+    height: 10px
+    width: 10px
+    background: hsla(220, 100%, 80%, 0.6)
+
+.large-drop
+    @extend .small-drop
+    z-index: 4
+    height: 14px
+    width: 14px
+    background: hsl(220, 100%, 80%)
+
+@for $i from 1 through 10
+    .small-drop#{$i}
+        animation: drop (1+random(20)/6)+s linear infinite
+        left: 30px*$i+ random(10)
+
+    .medium-drop#{$i}
+        animation: drop (0.8+random(20)/10)+s linear infinite
+        left: 30px*$i+ random(10)
+
+    .large-drop#{$i}
+        animation: drop (0.6+random(20)/14)+s linear infinite
+        left: 30px*$i+ random(10)
+
+@keyframes drop
+  0%
+    transform: translate(60px, -340px) scale(1) rotate(75deg)
+
+  85%
+    transform: translate(0, 0) scale(1) rotate(75deg)
+
+  100%
+    transform: translate(0, 0) scale(2, 0) rotate(75deg)

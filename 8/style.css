@@ -1,0 +1,519 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+html, body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  font-family: 'Open Sans';
+  font-weight: 100;
+}
+
+.container {
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 20px -10px black;
+          box-shadow: 5px 5px 20px -10px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin: 0;
+  width: 400px;
+  height: 400px;
+}
+
+.window {
+  background: #0e004d;
+  position: relative;
+  height: calc(100% - 80px);
+}
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+.left {
+  width: 60%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "temperature temperature wind wind" "temperature temperature humidity humidity";
+}
+
+.left__temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  font-size: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: temperature;
+}
+
+.left__wind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: wind;
+}
+
+.left__humidity {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: humidity;
+}
+
+.right {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.right > * {
+  text-align: end;
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+.right__temperature {
+  font-weight: 500;
+  text-align: end;
+}
+
+.hills .far-hill {
+  bottom: 0;
+  position: absolute;
+  background: #130066;
+  width: 240px;
+  border-radius: 50%;
+}
+
+.hills .far-hill1 {
+  height: 130px;
+  right: 0px;
+}
+
+.hills .far-hill2 {
+  height: 140px;
+  right: 160px;
+}
+
+.hills .close-hill {
+  bottom: -20px;
+  position: absolute;
+  background: #170080;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.hills .close-hill1 {
+  height: 115px;
+  right: -80px;
+}
+
+.hills .close-hill2 {
+  height: 130px;
+  right: 75px;
+}
+
+.hills .close-hill3 {
+  height: 90px;
+  right: 230px;
+}
+
+.moon {
+  -webkit-transition: -webkit-transform ease-in-out 1s;
+  transition: -webkit-transform ease-in-out 1s;
+  transition: transform ease-in-out 1s;
+  transition: transform ease-in-out 1s, -webkit-transform ease-in-out 1s;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+  overflow: hidden;
+  bottom: 0px;
+  left: 20px;
+  -webkit-box-shadow: 0px 0px 50px -5px #f6edbc;
+          box-shadow: 0px 0px 50px -5px #f6edbc;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: #f6edbc;
+  position: absolute;
+}
+
+.moon__crater {
+  border-radius: 50%;
+  left: 20px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f0e18f;
+}
+
+.moon__crater1 {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  top: 10px;
+  left: 10px;
+}
+
+.moon__crater2 {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  top: 10px;
+  left: 50px;
+}
+
+.moon__crater3 {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  top: 30px;
+  left: 40px;
+}
+
+.moon__crater4 {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  top: 40px;
+  left: 20px;
+}
+
+.moon__crater5 {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  top: 40px;
+  left: 90px;
+}
+
+.moon__crater6 {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  top: 55px;
+  left: 40px;
+}
+
+.moon__crater7 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  top: 23px;
+  left: 70px;
+}
+
+.moon__crater8 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  top: 60px;
+  left: 70px;
+}
+
+.moon__crater9 {
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+  top: 90px;
+  left: 43px;
+}
+
+.moon__crater10 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  top: 65px;
+  left: 22px;
+}
+
+.moon__crater11 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  top: 80px;
+  left: 10px;
+}
+
+.small-drop, .medium-drop, .large-drop {
+  -webkit-transform: rotate(75deg);
+          transform: rotate(75deg);
+  border-radius: 0 50% 50% 50%;
+  z-index: 3;
+  bottom: 0;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  background: rgba(153, 187, 255, 0.4);
+}
+
+.medium-drop {
+  z-index: 4;
+  height: 10px;
+  width: 10px;
+  background: rgba(153, 187, 255, 0.6);
+}
+
+.large-drop {
+  z-index: 4;
+  height: 14px;
+  width: 14px;
+  background: #99bbff;
+}
+
+.small-drop1 {
+  -webkit-animation: drop 4.16667s linear infinite;
+          animation: drop 4.16667s linear infinite;
+  left: 40px;
+}
+
+.medium-drop1 {
+  -webkit-animation: drop 2.6s linear infinite;
+          animation: drop 2.6s linear infinite;
+  left: 38px;
+}
+
+.large-drop1 {
+  -webkit-animation: drop 0.67143s linear infinite;
+          animation: drop 0.67143s linear infinite;
+  left: 39px;
+}
+
+.small-drop2 {
+  -webkit-animation: drop 3.83333s linear infinite;
+          animation: drop 3.83333s linear infinite;
+  left: 69px;
+}
+
+.medium-drop2 {
+  -webkit-animation: drop 1.8s linear infinite;
+          animation: drop 1.8s linear infinite;
+  left: 61px;
+}
+
+.large-drop2 {
+  -webkit-animation: drop 1.17143s linear infinite;
+          animation: drop 1.17143s linear infinite;
+  left: 66px;
+}
+
+.small-drop3 {
+  -webkit-animation: drop 1.16667s linear infinite;
+          animation: drop 1.16667s linear infinite;
+  left: 94px;
+}
+
+.medium-drop3 {
+  -webkit-animation: drop 2.2s linear infinite;
+          animation: drop 2.2s linear infinite;
+  left: 95px;
+}
+
+.large-drop3 {
+  -webkit-animation: drop 1.52857s linear infinite;
+          animation: drop 1.52857s linear infinite;
+  left: 98px;
+}
+
+.small-drop4 {
+  -webkit-animation: drop 1.16667s linear infinite;
+          animation: drop 1.16667s linear infinite;
+  left: 127px;
+}
+
+.medium-drop4 {
+  -webkit-animation: drop 1.5s linear infinite;
+          animation: drop 1.5s linear infinite;
+  left: 127px;
+}
+
+.large-drop4 {
+  -webkit-animation: drop 0.88571s linear infinite;
+          animation: drop 0.88571s linear infinite;
+  left: 126px;
+}
+
+.small-drop5 {
+  -webkit-animation: drop 3.5s linear infinite;
+          animation: drop 3.5s linear infinite;
+  left: 152px;
+}
+
+.medium-drop5 {
+  -webkit-animation: drop 2.8s linear infinite;
+          animation: drop 2.8s linear infinite;
+  left: 153px;
+}
+
+.large-drop5 {
+  -webkit-animation: drop 1.24286s linear infinite;
+          animation: drop 1.24286s linear infinite;
+  left: 160px;
+}
+
+.small-drop6 {
+  -webkit-animation: drop 3.83333s linear infinite;
+          animation: drop 3.83333s linear infinite;
+  left: 190px;
+}
+
+.medium-drop6 {
+  -webkit-animation: drop 2s linear infinite;
+          animation: drop 2s linear infinite;
+  left: 183px;
+}
+
+.large-drop6 {
+  -webkit-animation: drop 1.45714s linear infinite;
+          animation: drop 1.45714s linear infinite;
+  left: 187px;
+}
+
+.small-drop7 {
+  -webkit-animation: drop 2.83333s linear infinite;
+          animation: drop 2.83333s linear infinite;
+  left: 214px;
+}
+
+.medium-drop7 {
+  -webkit-animation: drop 1.3s linear infinite;
+          animation: drop 1.3s linear infinite;
+  left: 214px;
+}
+
+.large-drop7 {
+  -webkit-animation: drop 0.67143s linear infinite;
+          animation: drop 0.67143s linear infinite;
+  left: 217px;
+}
+
+.small-drop8 {
+  -webkit-animation: drop 1.5s linear infinite;
+          animation: drop 1.5s linear infinite;
+  left: 246px;
+}
+
+.medium-drop8 {
+  -webkit-animation: drop 1s linear infinite;
+          animation: drop 1s linear infinite;
+  left: 244px;
+}
+
+.large-drop8 {
+  -webkit-animation: drop 1.74286s linear infinite;
+          animation: drop 1.74286s linear infinite;
+  left: 250px;
+}
+
+.small-drop9 {
+  -webkit-animation: drop 4.33333s linear infinite;
+          animation: drop 4.33333s linear infinite;
+  left: 276px;
+}
+
+.medium-drop9 {
+  -webkit-animation: drop 1.5s linear infinite;
+          animation: drop 1.5s linear infinite;
+  left: 272px;
+}
+
+.large-drop9 {
+  -webkit-animation: drop 1.81429s linear infinite;
+          animation: drop 1.81429s linear infinite;
+  left: 271px;
+}
+
+.small-drop10 {
+  -webkit-animation: drop 1.16667s linear infinite;
+          animation: drop 1.16667s linear infinite;
+  left: 304px;
+}
+
+.medium-drop10 {
+  -webkit-animation: drop 2.2s linear infinite;
+          animation: drop 2.2s linear infinite;
+  left: 303px;
+}
+
+.large-drop10 {
+  -webkit-animation: drop 1.74286s linear infinite;
+          animation: drop 1.74286s linear infinite;
+  left: 304px;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: translate(60px, -340px) scale(1) rotate(75deg);
+            transform: translate(60px, -340px) scale(1) rotate(75deg);
+  }
+  85% {
+    -webkit-transform: translate(0, 0) scale(1) rotate(75deg);
+            transform: translate(0, 0) scale(1) rotate(75deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(2, 0) rotate(75deg);
+            transform: translate(0, 0) scale(2, 0) rotate(75deg);
+  }
+}
+
+@keyframes drop {
+  0% {
+    -webkit-transform: translate(60px, -340px) scale(1) rotate(75deg);
+            transform: translate(60px, -340px) scale(1) rotate(75deg);
+  }
+  85% {
+    -webkit-transform: translate(0, 0) scale(1) rotate(75deg);
+            transform: translate(0, 0) scale(1) rotate(75deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(2, 0) rotate(75deg);
+            transform: translate(0, 0) scale(2, 0) rotate(75deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
