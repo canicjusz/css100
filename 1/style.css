@@ -1,77 +1,162 @@
 body, html {
   background: #40b083;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .ham1 {
   border-radius: 10px;
-  box-shadow: 0 0 5px #333333;
+  -webkit-box-shadow: 0 0 5px #333333;
+          box-shadow: 0 0 5px #333333;
   position: relative;
   top: 0px;
   width: 100px;
   height: 10px;
-  background: white; }
+  background: white;
+}
 
 .off1 {
-  animation: animation1 0.7s both; }
+  -webkit-animation: animation1 0.7s both;
+          animation: animation1 0.7s both;
+}
 
 .on1 {
-  animation: animation1 0.7s both reverse; }
+  animation: animation1 0.7s both reverse;
+}
 
 .ham2 {
   border-radius: 10px;
-  box-shadow: 0 0 5px #333333;
+  -webkit-box-shadow: 0 0 5px #333333;
+          box-shadow: 0 0 5px #333333;
   position: relative;
   top: 15px;
   width: 100px;
   height: 10px;
-  background: white; }
+  background: white;
+}
 
 .off2 {
-  animation: animation2 0.7s both; }
+  -webkit-animation: animation2 0.7s both;
+          animation: animation2 0.7s both;
+}
 
 .on2 {
-  animation: animation2 0.7s both reverse; }
+  animation: animation2 0.7s both reverse;
+}
 
 .ham3 {
   border-radius: 10px;
-  box-shadow: 0 0 5px #333333;
+  -webkit-box-shadow: 0 0 5px #333333;
+          box-shadow: 0 0 5px #333333;
   position: relative;
   top: 30px;
   width: 100px;
   height: 10px;
-  background: white; }
+  background: white;
+}
 
 .off3 {
-  animation: animation3 0.7s both; }
+  -webkit-animation: animation3 0.7s both;
+          animation: animation3 0.7s both;
+}
 
 .on3 {
-  animation: animation3 0.7s both reverse; }
+  animation: animation3 0.7s both reverse;
+}
+
+@-webkit-keyframes animation1 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  100% {
+    -webkit-transform: translateY(25px) rotate(45deg);
+            transform: translateY(25px) rotate(45deg);
+  }
+}
 
 @keyframes animation1 {
   0% {
-    transform: translateX(0); }
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
   50% {
-    transform: translateY(25px); }
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
   100% {
-    transform: translateY(25px) rotate(45deg); } }
+    -webkit-transform: translateY(25px) rotate(45deg);
+            transform: translateY(25px) rotate(45deg);
+  }
+}
+
+@-webkit-keyframes animation2 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
 @keyframes animation2 {
   0% {
     opacity: 1;
-    transform: scale(1); }
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
   100% {
     opacity: 0;
-    transform: scale(0); } }
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes animation3 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+  100% {
+    -webkit-transform: translateY(-25px) rotate(135deg);
+            transform: translateY(-25px) rotate(135deg);
+  }
+}
+
 @keyframes animation3 {
   0% {
-    transform: translateX(0); }
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
   50% {
-    transform: translateY(-25px); }
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
   100% {
-    transform: translateY(-25px) rotate(135deg); } }
-
+    -webkit-transform: translateY(-25px) rotate(135deg);
+            transform: translateY(-25px) rotate(135deg);
+  }
+}
 /*# sourceMappingURL=style.css.map */
