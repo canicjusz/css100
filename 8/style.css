@@ -308,183 +308,183 @@ html, body {
 }
 
 .small-drop1 {
-  -webkit-animation: drop 4.16667s linear infinite;
-          animation: drop 4.16667s linear infinite;
-  left: 40px;
+  -webkit-animation: drop 2.33333s linear infinite;
+          animation: drop 2.33333s linear infinite;
+  left: 37px;
 }
 
 .medium-drop1 {
-  -webkit-animation: drop 2.6s linear infinite;
-          animation: drop 2.6s linear infinite;
-  left: 38px;
+  -webkit-animation: drop 1.6s linear infinite;
+          animation: drop 1.6s linear infinite;
+  left: 34px;
 }
 
 .large-drop1 {
-  -webkit-animation: drop 0.67143s linear infinite;
-          animation: drop 0.67143s linear infinite;
-  left: 39px;
+  -webkit-animation: drop 1.1s linear infinite;
+          animation: drop 1.1s linear infinite;
+  left: 35px;
 }
 
 .small-drop2 {
   -webkit-animation: drop 3.83333s linear infinite;
           animation: drop 3.83333s linear infinite;
-  left: 69px;
+  left: 68px;
 }
 
 .medium-drop2 {
-  -webkit-animation: drop 1.8s linear infinite;
-          animation: drop 1.8s linear infinite;
-  left: 61px;
+  -webkit-animation: drop 2.3s linear infinite;
+          animation: drop 2.3s linear infinite;
+  left: 62px;
 }
 
 .large-drop2 {
-  -webkit-animation: drop 1.17143s linear infinite;
-          animation: drop 1.17143s linear infinite;
-  left: 66px;
+  -webkit-animation: drop 1.95714s linear infinite;
+          animation: drop 1.95714s linear infinite;
+  left: 65px;
 }
 
 .small-drop3 {
-  -webkit-animation: drop 1.16667s linear infinite;
-          animation: drop 1.16667s linear infinite;
-  left: 94px;
+  -webkit-animation: drop 3s linear infinite;
+          animation: drop 3s linear infinite;
+  left: 91px;
 }
 
 .medium-drop3 {
-  -webkit-animation: drop 2.2s linear infinite;
-          animation: drop 2.2s linear infinite;
-  left: 95px;
+  -webkit-animation: drop 1.4s linear infinite;
+          animation: drop 1.4s linear infinite;
+  left: 93px;
 }
 
 .large-drop3 {
-  -webkit-animation: drop 1.52857s linear infinite;
-          animation: drop 1.52857s linear infinite;
-  left: 98px;
+  -webkit-animation: drop 1.6s linear infinite;
+          animation: drop 1.6s linear infinite;
+  left: 99px;
 }
 
 .small-drop4 {
-  -webkit-animation: drop 1.16667s linear infinite;
-          animation: drop 1.16667s linear infinite;
-  left: 127px;
+  -webkit-animation: drop 3.33333s linear infinite;
+          animation: drop 3.33333s linear infinite;
+  left: 122px;
 }
 
 .medium-drop4 {
-  -webkit-animation: drop 1.5s linear infinite;
-          animation: drop 1.5s linear infinite;
-  left: 127px;
-}
-
-.large-drop4 {
-  -webkit-animation: drop 0.88571s linear infinite;
-          animation: drop 0.88571s linear infinite;
+  -webkit-animation: drop 1.7s linear infinite;
+          animation: drop 1.7s linear infinite;
   left: 126px;
 }
 
+.large-drop4 {
+  -webkit-animation: drop 1.95714s linear infinite;
+          animation: drop 1.95714s linear infinite;
+  left: 122px;
+}
+
 .small-drop5 {
-  -webkit-animation: drop 3.5s linear infinite;
-          animation: drop 3.5s linear infinite;
+  -webkit-animation: drop 2s linear infinite;
+          animation: drop 2s linear infinite;
   left: 152px;
 }
 
 .medium-drop5 {
-  -webkit-animation: drop 2.8s linear infinite;
-          animation: drop 2.8s linear infinite;
-  left: 153px;
+  -webkit-animation: drop 1.4s linear infinite;
+          animation: drop 1.4s linear infinite;
+  left: 156px;
 }
 
 .large-drop5 {
-  -webkit-animation: drop 1.24286s linear infinite;
-          animation: drop 1.24286s linear infinite;
-  left: 160px;
+  -webkit-animation: drop 0.67143s linear infinite;
+          animation: drop 0.67143s linear infinite;
+  left: 151px;
 }
 
 .small-drop6 {
-  -webkit-animation: drop 3.83333s linear infinite;
-          animation: drop 3.83333s linear infinite;
+  -webkit-animation: drop 2.16667s linear infinite;
+          animation: drop 2.16667s linear infinite;
   left: 190px;
 }
 
 .medium-drop6 {
   -webkit-animation: drop 2s linear infinite;
           animation: drop 2s linear infinite;
-  left: 183px;
+  left: 182px;
 }
 
 .large-drop6 {
-  -webkit-animation: drop 1.45714s linear infinite;
-          animation: drop 1.45714s linear infinite;
-  left: 187px;
+  -webkit-animation: drop 0.88571s linear infinite;
+          animation: drop 0.88571s linear infinite;
+  left: 182px;
 }
 
 .small-drop7 {
-  -webkit-animation: drop 2.83333s linear infinite;
-          animation: drop 2.83333s linear infinite;
-  left: 214px;
+  -webkit-animation: drop 3.83333s linear infinite;
+          animation: drop 3.83333s linear infinite;
+  left: 215px;
 }
 
 .medium-drop7 {
-  -webkit-animation: drop 1.3s linear infinite;
-          animation: drop 1.3s linear infinite;
-  left: 214px;
+  -webkit-animation: drop 1.6s linear infinite;
+          animation: drop 1.6s linear infinite;
+  left: 219px;
 }
 
 .large-drop7 {
-  -webkit-animation: drop 0.67143s linear infinite;
-          animation: drop 0.67143s linear infinite;
-  left: 217px;
+  -webkit-animation: drop 1.74286s linear infinite;
+          animation: drop 1.74286s linear infinite;
+  left: 211px;
 }
 
 .small-drop8 {
-  -webkit-animation: drop 1.5s linear infinite;
-          animation: drop 1.5s linear infinite;
-  left: 246px;
-}
-
-.medium-drop8 {
-  -webkit-animation: drop 1s linear infinite;
-          animation: drop 1s linear infinite;
-  left: 244px;
-}
-
-.large-drop8 {
-  -webkit-animation: drop 1.74286s linear infinite;
-          animation: drop 1.74286s linear infinite;
+  -webkit-animation: drop 2.83333s linear infinite;
+          animation: drop 2.83333s linear infinite;
   left: 250px;
 }
 
-.small-drop9 {
-  -webkit-animation: drop 4.33333s linear infinite;
-          animation: drop 4.33333s linear infinite;
-  left: 276px;
+.medium-drop8 {
+  -webkit-animation: drop 1.1s linear infinite;
+          animation: drop 1.1s linear infinite;
+  left: 241px;
 }
 
-.medium-drop9 {
-  -webkit-animation: drop 1.5s linear infinite;
-          animation: drop 1.5s linear infinite;
+.large-drop8 {
+  -webkit-animation: drop 1.45714s linear infinite;
+          animation: drop 1.45714s linear infinite;
+  left: 246px;
+}
+
+.small-drop9 {
+  -webkit-animation: drop 1.33333s linear infinite;
+          animation: drop 1.33333s linear infinite;
   left: 272px;
 }
 
+.medium-drop9 {
+  -webkit-animation: drop 2.1s linear infinite;
+          animation: drop 2.1s linear infinite;
+  left: 280px;
+}
+
 .large-drop9 {
-  -webkit-animation: drop 1.81429s linear infinite;
-          animation: drop 1.81429s linear infinite;
-  left: 271px;
+  -webkit-animation: drop 1.17143s linear infinite;
+          animation: drop 1.17143s linear infinite;
+  left: 272px;
 }
 
 .small-drop10 {
-  -webkit-animation: drop 1.16667s linear infinite;
-          animation: drop 1.16667s linear infinite;
-  left: 304px;
+  -webkit-animation: drop 3.16667s linear infinite;
+          animation: drop 3.16667s linear infinite;
+  left: 307px;
 }
 
 .medium-drop10 {
-  -webkit-animation: drop 2.2s linear infinite;
-          animation: drop 2.2s linear infinite;
-  left: 303px;
+  -webkit-animation: drop 1.1s linear infinite;
+          animation: drop 1.1s linear infinite;
+  left: 304px;
 }
 
 .large-drop10 {
-  -webkit-animation: drop 1.74286s linear infinite;
-          animation: drop 1.74286s linear infinite;
-  left: 304px;
+  -webkit-animation: drop 0.67143s linear infinite;
+          animation: drop 0.67143s linear infinite;
+  left: 307px;
 }
 
 @-webkit-keyframes drop {
